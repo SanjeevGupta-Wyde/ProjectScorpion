@@ -1,0 +1,120 @@
+{
+    "EnvironmentName": "kpmg",
+    "DevOpsOwner": "Sanjeev Gupta",
+    "BusinessOwner": "Sanjeev Gupta",
+    "DevOpsMailAdress": "guptasanjeev.ism@gmail.com",   
+    "db": {
+      "createdatabase": true,
+      "user": "kpmg",
+      "server": "kpmg-db.postgres.database.azure.com",
+      "name": "kpmg-db",
+      "sourceName": "kpmg",
+      "database" : "kpmg",
+      "databasetype" : "postgre",
+      "location" : "centralindia",
+       "admin" : {
+          "user" : "kpmg",
+          "password" : "2wZMS7cV"
+      },
+       "sku" : "Standard_D2s_v3",
+       "tags" : {
+           "Business Owner": "Sanjeev Gupta",
+           "DevOps Owner": "Sanjeev Gupta"
+       },
+       "version" : "13"
+    },
+    "group" : {
+      "createresourcegroup": true,
+      "name" : "kpmg",
+      "location" : "centralindia",
+      "tags" : {
+          "Business Owner": "Sanjeev Gupta",
+          "DevOps Owner": "Sanjeev Gupta"
+      }
+    },
+    "filestorages" : [
+      {
+        "name" : "afsdatafiles",
+        "sku" : "Standard_LRS",
+        "fileshare" :  "kpmgdatafiles",
+        "EndpointSuffix": "core.windows.net",
+        "size" : "5",
+        "generatedfilename" : "afsdatafiles.json",        
+        "tags" : {
+            "Business Owner": "Sanjeev Gupta",
+            "DevOps Owner": "Sanjeev Gupta"
+        }
+      },
+      {
+        "name" : "afslogfiles",
+        "sku" : "Standard_LRS",
+        "fileshare" :  "kpmglogfiles",
+        "size" : "15",
+        "EndpointSuffix": "core.windows.net",
+        "generatedfilename" : "afslogfiles.json",
+        "tags" : {
+            "Business Owner": "Sanjeev Gupta",
+            "DevOps Owner": "Sanjeev Gupta"
+        }
+      }
+    ],    
+    "vm" : {
+      "createvm": true,
+      "image" : "/subscriptions/0b03bae6-6ab7-49e0-9a1c-ee83f9f409f7/resourceGroups/wydeimagegalley/providers/Microsoft.Compute/galleries/wydeimagesfr/images/wydeimage/versions/1.0.0",
+      "vnet": {
+          "name": "kpmg-vnet",
+          "address": "10.0.0.0/8",
+          "subnets": [
+              {
+                  "name": "front",
+                  "address": "10.240.0.0/16"
+              },
+              {
+                  "name": "back",
+                  "address": "10.241.0.0/16"
+              },
+              {
+                "name": "db",
+                "address": "10.242.0.0/16"
+              }  
+          ]
+      },
+      "vms" : [
+          {
+              "name": "kpmg-front",
+              "adminname" : "kpmg",
+              "password" : "5d23SmAa83",
+              "subnet" : "front",
+              "DNSname": "kpmg-front",
+              "vmsize" : "Standard_D2s_v3",
+              "role" : "front",
+              "ostype" : "windows"
+
+          },
+          {
+              "name": "kpmg-back",
+              "adminname" : "kpmg",
+              "password" : "5d23SmAa83",
+              "subnet" : "back",
+              "DNSname": "kpmg-back",
+              "vmsize" : "Standard_D4ds_v5",
+              "role" : "back",
+              "ostype" : "linux"
+          }
+      ],
+      "tags" : {
+        "Business Owner": "Sanjeev Gupta",
+        "DevOps Owner": "Sanjeev Gupta"
+      }
+    },
+    "services": {
+      "wydeweb": {
+        "nbUsers": 10
+      },
+      "fullweb": {
+        "nbUsers": 10
+      }
+    },
+    "sso": false,
+    "firebase": false
+}

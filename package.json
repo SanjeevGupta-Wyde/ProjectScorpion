@@ -1,0 +1,23 @@
+{
+  "name": "projectscorpion",
+  "version": "1.0.0",
+  "description": "Solution for KPMG Technical Challenge",
+  "main": "index.js",
+  "scripts": {
+    "create:infra": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_creation/azure/1-az-setup.ps1",
+    "test": "ECHO #Work In progress#"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuptaSanjeev-ISM/ProjectScorpion.git"
+  },
+  "keywords": [
+    "KPMG"
+  ],
+  "author": "Sanjeev Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuptaSanjeev-ISM/ProjectScorpion/issues"
+  },
+  "homepage": "https://github.com/GuptaSanjeev-ISM/ProjectScorpion#readme"
+}
