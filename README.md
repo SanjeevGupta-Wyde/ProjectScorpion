@@ -1,49 +1,53 @@
 # ProjectScorpion
-Solution for KPMG Technical Challeng
+##  Solution for KPMG Technical Challenge 
 This repo contains solution for KPMG Technical Challenge on Azure Cloud
 
 Below is the relevent files for each challenges
-Challenge #1: 
+
+## Challenge #1: 
 - infra_provision\azure\1-az-setup.ps1
 - infra_provision\azure\Resources\1-create-ARG.ps1
 - infra_provision\azure\Resources\2-create-AFS.ps1
 - infra_provision\azure\Resources\3-create-AVM.ps1
 - infra_provision\azure\Resources\4-create-APG.ps1
 
-Challenge #2:
+## Challenge #2:
 - infra_provision\azure\2-az-metadata.ps1
 - infra_provision\azure\Operations\GetInstanceMatadataForWindowsVM.ps1
 - infra_provision\azure\Operations\GetInstanceMatadataForLinuxVM.ps1 
 
-Challenge #3:
+## Challenge #3:
 - scripts\js\retrieveValueUsingKey.js
 
-Challenge #1 - Setup a 3-tier environment
+## Challenge #1 - Setup a 3-tier environment
 
 Prerequisite:
 1. You should have an Azure Account
-2. You should module az version 2.32 and above installed on your local machine. You can check it by command "az --version"
+2. You should have module az version 2.32 and above installed on your local machine. You can check it by command "az --version"
 3. You should have pwsh installed. You can run "npm install pwsh" to install it.
-4. npm install
+4. Run command npm install
 
 Procedure: 
-1. Create a config file #EnvName#.json under folder ../config
-# To Do: create a template config file
-2. Run npm command "npm run create:infra #EnvName#"
+1. Create a config file `#EnvName#.json` under folder ../config
+
+ To Do: create a template config file
+2. Run npm command ```npm run create:infra #EnvName#" ```
 
 
-Challenge #2 - Get an instance metadata
+## Challenge #2 - Get an instance metadata
 Prerequisite:
-All Prerequisites of Challenge #1
+Same Prerequisites of Challenge #1
 Procedure:
-1. Run npm command "npm run retrieve:metadata #EnvName# #vmrole#"
+1. Run npm command ```npm run retrieve:metadata #EnvName# #vmrole#```
 
 #vmrole# : can be 'front' or 'back'
 
-Challenge #3 - Retrieve Value using key from a nested object
+## Challenge #3 - Retrieve Value using key from a nested object
 
 Procedure: 
-1. run npm command "npm run challenge:3"
+1. run npm command ```npm run challenge:3```
+
+-------------------------------------------------------------------------------------------------------------------------------------
 
 To do:
 1. update .gitignore
