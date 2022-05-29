@@ -29,8 +29,6 @@ Prerequisite:
 
 Procedure: 
 1. Create a config file `#EnvName#.json` under folder ../config
-
- To Do: create a template config file
 2. Run npm command ```npm run create:infra #EnvName#" ```
 
 
@@ -53,3 +51,5 @@ To do:
 1. update .gitignore
 2. Add steps to pass retrieved metadata (retrieved in Challenge #2) and key to script retrieveValueUsingKey.js
 3. Add better tests for Challenge #3
+4. Create a template config file which can be used to create env config file
+
