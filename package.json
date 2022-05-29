@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "create:infra": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_creation/azure/1-az-setup.ps1",
+    "retrieve:metadata": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_creation/azure/2-az-metadata.ps1",
+    "Challenge:3": "node ./scripts/js/retrieveValueUsingKey.js",
     "test": "ECHO #Work In progress#"
   },
   "repository": {
@@ -18,6 +20,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GuptaSanjeev-ISM/ProjectScorpion/issues"
+  },
+  "dependencies": {
+    "minimist": "^1.2.5"
   },
   "homepage": "https://github.com/GuptaSanjeev-ISM/ProjectScorpion#readme"
 }
