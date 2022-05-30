@@ -4,8 +4,8 @@
   "description": "Solution for KPMG Technical Challenge",
   "main": "index.js",
   "scripts": {
-    "create:infra": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_creation/azure/1-az-setup.ps1",
-    "retrieve:metadata": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_creation/azure/2-az-metadata.ps1",
+    "create:infra": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_provision/azure/1-az-setup.ps1",
+    "retrieve:metadata": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_provision/azure/2-az-metadata.ps1",
     "Challenge:3": "node ./scripts/js/retrieveValueUsingKey.js",
     "test": "ECHO #Work In progress#"
   },

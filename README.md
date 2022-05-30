@@ -37,7 +37,7 @@ example: ```npm run create:infra kpmgtestenv```
 Prerequisite:
 Same Prerequisites of Challenge #1
 Procedure:
-1. Run npm command ```npm run retrieve:metadata #EnvName# #vmrole#```
+1. To retrieve complete metadata, run npm command ```npm run retrieve:metadata #EnvName# #vmrole#```
 
 #vmrole# : can be 'front' or 'back'
 
