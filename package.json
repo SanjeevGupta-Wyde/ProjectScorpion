@@ -6,7 +6,8 @@
   "scripts": {
     "create:infra": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_provision/azure/1-az-setup.ps1",
     "retrieve:metadata": "pwsh -NoProfile -ExecutionPolicy Unrestricted -File ./infra_provision/azure/2-az-metadata.ps1",
-    "Challenge:3": "node ./scripts/js/retrieveValueUsingKey.js",
+    "retrievedata:key": "node ./scripts/js/retrieveValueUsingKey.js",
+    "test:retrievedata:key": "node ./scripts/js/retrieveValueUsingKey_withKeyAndData.js",
     "test": "ECHO #Work In progress#"
   },
   "repository": {

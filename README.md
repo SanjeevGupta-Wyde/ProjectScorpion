@@ -19,14 +19,16 @@ Below is the relevent files for each challenges
 
 ## Challenge #3:
 - scripts\js\retrieveValueUsingKey.js
+- scripts\js\retrieveValueUsingKey_withKeyAndData.js
 
-## Challenge #1 - Setup a 3-tier environment
-
-Prerequisite:
+## Prerequisite:
 1. You should have an Azure Account
 2. You should have module az version 2.32 and above installed on your local machine. You can check it by command "az --version"
-3. You should have pwsh installed. You can run "npm install pwsh" to install it.
-4. Run command npm install
+3. You should have nodejs v10.x or above installed.
+4. You should have pwsh installed. You can run "npm install pwsh" to install it.
+5. Run command `npm i`
+
+## Challenge #1 - Setup a 3-tier environment
 
 Procedure: 
 1. Create a config file `#EnvName#.json` under folder ../config
@@ -34,19 +36,27 @@ Procedure:
 example: ```npm run create:infra kpmgtestenv```
 
 ## Challenge #2 - Get an instance metadata
-Prerequisite:
-Same Prerequisites of Challenge #1
+
 Procedure:
-1. To retrieve complete metadata, run npm command ```npm run retrieve:metadata #EnvName# #vmrole#```
+1. To retrieve metadata for an instance, run npm command ```npm run retrieve:metadata #EnvName# #VMRole# #VMProperty#```
 
-#vmrole# : can be 'front' or 'back'
+#EnvName# : Name of the env
+#VMRole# : can be 'front' or 'back'
+#VMProperty# : to specify a data key. Use '/' for nested key. Leave blank for complete metadata
 
-example: ```npm run retrieve:metadata kpmgtestenv front```
+example: 1. ```npm run retrieve:metadata kpmgtestenv front``` 
+         2. ```npm run retrieve:metadata kpmgtestenv back compute/name``` 
+
 
 ## Challenge #3 - Retrieve Value using key from a nested object
 
 Procedure: 
-1. run npm command ```npm run challenge:3```
+1. run npm command ```npm run retrievedata:key #dataobject# #key#```
+   #dataobject# : nested object
+   #key# : data key to retrieve
+
+For Test, run npm command ```npm run test:retrievedata:key```
+
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
