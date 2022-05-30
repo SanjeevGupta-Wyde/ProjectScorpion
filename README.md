@@ -4,6 +4,7 @@ This repo contains solution for KPMG Technical Challenge on Azure Cloud
 
 Below is the relevent files for each challenges
 
+
 ## Challenge #1: 
 - infra_provision\azure\1-az-setup.ps1
 - infra_provision\azure\Resources\1-create-ARG.ps1
@@ -30,7 +31,7 @@ Prerequisite:
 Procedure: 
 1. Create a config file `#EnvName#.json` under folder ../config
 2. Run npm command ```npm run create:infra #EnvName#" ```
-
+example: ```npm run create:infra kpmgtestenv```
 
 ## Challenge #2 - Get an instance metadata
 Prerequisite:
@@ -39,6 +40,8 @@ Procedure:
 1. Run npm command ```npm run retrieve:metadata #EnvName# #vmrole#```
 
 #vmrole# : can be 'front' or 'back'
+
+example: ```npm run retrieve:metadata kpmgtestenv front```
 
 ## Challenge #3 - Retrieve Value using key from a nested object
 

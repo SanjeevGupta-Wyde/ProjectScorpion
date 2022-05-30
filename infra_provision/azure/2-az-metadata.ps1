@@ -1,7 +1,7 @@
 Param(
 
     [Parameter(Mandatory=$true)]
-    [string]$envconfigfile
+    [string]$envconfigfile,
     [Parameter(Mandatory=$true)]
     [string]$vmrole
  ) #end param
