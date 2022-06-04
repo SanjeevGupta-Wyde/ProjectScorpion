@@ -60,7 +60,7 @@
     ],    
     "vm" : {
       "createvm": true,
-      "image" : "/subscriptions/0b03bae6-6ab7-49e0-9a1c-ee83f9f409f7/resourceGroups/wydeimagegalley/providers/Microsoft.Compute/galleries/wydeimagesfr/images/wydeimage/versions/1.0.0",
+      "image" : "/subscriptions/#subscriptionid#/resourceGroups/kpmgimagegalley/providers/Microsoft.Compute/galleries/kpmgimagesfr/images/kpmgimage/versions/1.0.0",
       "vnet": {
           "name": "kpmg-vnet",
           "address": "10.0.0.0/8",
@@ -94,7 +94,7 @@
           {
               "name": "kpmg-back",
               "adminname" : "kpmg",
-              "password" : "5d23SmAa83",
+              "password" : "kjhyqw762jsw2",
               "subnet" : "back",
               "DNSname": "kpmg-back",
               "vmsize" : "Standard_D4ds_v5",
